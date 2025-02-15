@@ -121,7 +121,7 @@ Ensure you have the following installed:
    ```nginx
    server {
        listen 80;
-       server_name your-ec2-public-ip;
+       server_name 16.16.185.143;
 
        location / {
            proxy_pass http://127.0.0.1:8000;
@@ -206,7 +206,7 @@ jobs:
 
 ### 5. Add Secrets to GitHub
 Go to **GitHub → Repository → Settings → Secrets → Actions**:
-- `SERVER_IP`: `your-ec2-public-ip`
+- `SERVER_IP`: 16.16.185.143
 - `SSH_PRIVATE_KEY`: Paste the content of `ben.pem`
 
 ---
@@ -218,7 +218,7 @@ Go to **GitHub → Repository → Settings → Secrets → Actions**:
    sudo systemctl status nginx
    ```
 2. **Test the API:**
-   Open: `http://your-ec2-public-ip/docs`
+   Open: `http://16.16.185.143/docs`
 
 ---
 
